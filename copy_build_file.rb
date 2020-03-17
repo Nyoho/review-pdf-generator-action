@@ -2,7 +2,7 @@ require 'fileutils'
 require 'yaml'
 require 'date'
 
-OUTPUT_PATH = "build/output.pdf"
+OUTPUT_PATH = "build/output.epub"
 
 config_dir = "."
 
@@ -13,10 +13,10 @@ end
 config_path = File.join(config_dir, "config.yml")
 
 conf = YAML.safe_load(File.read(config_path), [Date])
-pdf_path = File.join(config_dir, conf["bookname"]+".pdf")
-puts "generate PDF #{pdf_path}."
+epub_path = File.join(config_dir, conf["bookname"]+".epub")
+puts "generate EPUB #{epub_path}."
 
-if File.exist?(pdf_path)
+if File.exist?(epub_path)
   FileUtils.mkdir_p(File.dirname(OUTPUT_PATH))
-  FileUtils.cp(pdf_path, OUTPUT_PATH)
+  FileUtils.cp(epub_path, OUTPUT_PATH)
 end

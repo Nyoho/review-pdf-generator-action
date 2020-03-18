@@ -67,3 +67,7 @@ jobs:
 * inputs の `name` と `path` が省略可になっています
 * デフォルトの `path` は `build/output.epub` になっています(Re:VIEW EPUB Generator Actionの出力先に揃えています)
 
+
+## Thanks
+
+forked from [takahashim/review-pdf-generator-action](https://github.com/takahashim/review-pdf-generator-action)

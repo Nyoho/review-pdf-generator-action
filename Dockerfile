@@ -1,4 +1,4 @@
-FROM vvakame/review:4.0
+FROM vvakame/review:5.6
 
 LABEL "com.github.actions.name"="Re:VIEW PDF Generator"
 LABEL "com.github.actions.description"="builds PDF from Re:VIEW repository and uploads as Artifacts"

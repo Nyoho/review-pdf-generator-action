@@ -9,6 +9,8 @@ LABEL "repository"="https://github.com/takahashim/review-pdf-generator-action"
 LABEL "homepage"="https://github.com/takahashim/review-pdf-generator-action"
 LABEL "maintainer"="takahashim <takahashimm@gmail.com>"
 
+RUN apt-get install libmecab2 libmecab-dev mecab mecab-ipadic mecab-ipadic-utf8 mecab-utils
+
 ADD entrypoint.sh /entrypoint.sh
 ADD copy_build_file.rb /copy_build_file.rb
 ENTRYPOINT ["/entrypoint.sh"]
